@@ -6,5 +6,6 @@ target 'Chuck Facts' do
   use_frameworks!
 
   # Pods for Chuck Facts
+  pod 'Alamofire'
 
 end
