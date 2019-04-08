@@ -16,6 +16,7 @@ protocol BaseServiceData {
 internal enum BaseEndPoint {
     case categories
     case searchFacts(query: String)
+    case searchFactsByCategory(query: String)
 }
 extension BaseEndPoint: BaseServiceData {
     var urlBase: String {
@@ -31,6 +32,8 @@ extension BaseEndPoint: BaseServiceData {
         case .searchFacts(let query):
             return "search?query=\(query)"
 
+        case .searchFactsByCategory(let query):
+            return "random?category=\(query)"
         }
     }
 }

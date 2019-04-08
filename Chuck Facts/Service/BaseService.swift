@@ -13,6 +13,7 @@ protocol BaseService {
     func request(endPoint: BaseEndPoint, completion: @escaping (RequestResult<Any, String>) -> Void )
 }
 
+
 extension BaseService {
     func request(endPoint: BaseEndPoint, completion: @escaping (RequestResult<Any, String>) -> Void ) {
         if let url = URL(string: endPoint.urlBase + endPoint.path) {
