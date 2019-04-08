@@ -33,4 +33,13 @@ struct Fact : Codable {
         value = try values.decodeIfPresent(String.self, forKey: .value)
     }
 
+    static func decode(from json: Any) -> Fact? {
+        if let jsonData = try? JSONSerialization.data(withJSONObject: json, options: []) {
+            if let decodedObject = try? JSONDecoder().decode(Fact.self, from: jsonData) {
+                return decodedObject
+            }
+        }
+        return nil
+    }
+
 }

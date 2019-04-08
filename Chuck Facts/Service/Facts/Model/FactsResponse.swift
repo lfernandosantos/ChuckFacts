@@ -9,6 +9,7 @@
 import Foundation
 
 struct FactsResponse: Codable {
+    
     let total : Int?
     let fact : [Fact]?
 
@@ -16,6 +17,7 @@ struct FactsResponse: Codable {
 
         case total = "total"
         case fact = "result"
+
     }
 
     init(from decoder: Decoder) throws {
@@ -32,6 +34,5 @@ struct FactsResponse: Codable {
         }
         return nil
     }
-
 
 }
