@@ -24,11 +24,15 @@ class DataManager {
     }
 
     static func saveLastSearch(_ search: String) {
-        var list = loadSearchs()
-        list.append(search)
-        if list.count > 4 {
-            list.removeFirst()
+        var list = [String] (loadSearchs().reversed())
+
+        var newList = list.filter { $0 != search }
+
+        newList.append(search)
+        if newList.count > 4 {
+            newList.removeFirst()
         }
+        UserDefaults.standard.set(newList, forKey: searchsKey)
     }
 
     static func loadSearchs() -> [String] {
