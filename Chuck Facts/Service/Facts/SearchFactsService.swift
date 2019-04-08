@@ -24,5 +24,18 @@ struct SearchFactsService: BaseService {
             }
         }
     }
+
+    func fetch(category: String, completion: @escaping (RequestResult<Fact?, String>)-> Void ) {
+        self.request(endPoint: .searchFactsByCategory(query: category)) { (result) in
+            switch result {
+            case .failure(let error):
+                completion(RequestResult.failure(error))
+            case .success(let json):
+
+                let response = Fact.decode(from: json)
+                completion(RequestResult.success(response))
+            }
+        }
+    }
 }
 

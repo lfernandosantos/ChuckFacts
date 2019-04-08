@@ -8,20 +8,48 @@
 
 /* Begin PBXBuildFile section */
 		BE1ECDAF22545F98000A545C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1ECDAE22545F98000A545C /* AppDelegate.swift */; };
-		BE1ECDB122545F98000A545C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1ECDB022545F98000A545C /* ViewController.swift */; };
+		BE1ECDB122545F98000A545C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1ECDB022545F98000A545C /* SearchViewController.swift */; };
 		BE1ECDB422545F98000A545C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE1ECDB222545F98000A545C /* Main.storyboard */; };
 		BE1ECDB622545F99000A545C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE1ECDB522545F99000A545C /* Assets.xcassets */; };
 		BE1ECDB922545F99000A545C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE1ECDB722545F99000A545C /* LaunchScreen.storyboard */; };
+		BE1ECDC12254649E000A545C /* SuggestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1ECDC02254649E000A545C /* SuggestionsViewModel.swift */; };
+		BE1ECDC322546644000A545C /* SuggestionsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1ECDC222546644000A545C /* SuggestionsCollectionViewCell.swift */; };
+		BE1ECDC622546A2D000A545C /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1ECDC522546A2D000A545C /* BaseService.swift */; };
+		BE1ECDC922546B39000A545C /* CategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1ECDC822546B39000A545C /* CategoriesService.swift */; };
+		BE1ECDCB225585EC000A545C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1ECDCA225585EC000A545C /* DataManager.swift */; };
+		BE1ECDCD22558974000A545C /* RequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1ECDCC22558974000A545C /* RequestResult.swift */; };
+		BE1ECDD122559B98000A545C /* SearchFactsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1ECDD022559B98000A545C /* SearchFactsService.swift */; };
+		BE1ECDD322559C9C000A545C /* BaseServiceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1ECDD222559C9C000A545C /* BaseServiceData.swift */; };
+		BE1ECDD72255A041000A545C /* FactsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1ECDD62255A041000A545C /* FactsResponse.swift */; };
+		BE1ECDD92255A1DE000A545C /* Facts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1ECDD82255A1DE000A545C /* Facts.swift */; };
+		BE1ECDDB2256DA08000A545C /* ChuckFactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1ECDDA2256DA08000A545C /* ChuckFactsTableViewController.swift */; };
+		BE1ECDDF225960BB000A545C /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1ECDDE225960BB000A545C /* SearchViewModel.swift */; };
+		D623A409306F2409BB4AE9C2 /* Pods_Chuck_Facts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D1A015D0CFE00410CA1C7E /* Pods_Chuck_Facts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36D1A015D0CFE00410CA1C7E /* Pods_Chuck_Facts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chuck_Facts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36DCA0ACFAA5F07BD822BF00 /* Pods-Chuck Facts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chuck Facts.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chuck Facts/Pods-Chuck Facts.release.xcconfig"; sourceTree = "<group>"; };
+		5833EF3E99E5FFF4DCE5B3EC /* Pods-Chuck Facts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chuck Facts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chuck Facts/Pods-Chuck Facts.debug.xcconfig"; sourceTree = "<group>"; };
 		BE1ECDAB22545F98000A545C /* Chuck Facts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chuck Facts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE1ECDAE22545F98000A545C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BE1ECDB022545F98000A545C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BE1ECDB022545F98000A545C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		BE1ECDB322545F98000A545C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE1ECDB522545F99000A545C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE1ECDB822545F99000A545C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE1ECDBA22545F99000A545C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE1ECDC02254649E000A545C /* SuggestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsViewModel.swift; sourceTree = "<group>"; };
+		BE1ECDC222546644000A545C /* SuggestionsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsCollectionViewCell.swift; sourceTree = "<group>"; };
+		BE1ECDC522546A2D000A545C /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		BE1ECDC822546B39000A545C /* CategoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesService.swift; sourceTree = "<group>"; };
+		BE1ECDCA225585EC000A545C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		BE1ECDCC22558974000A545C /* RequestResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResult.swift; sourceTree = "<group>"; };
+		BE1ECDD022559B98000A545C /* SearchFactsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFactsService.swift; sourceTree = "<group>"; };
+		BE1ECDD222559C9C000A545C /* BaseServiceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseServiceData.swift; sourceTree = "<group>"; };
+		BE1ECDD62255A041000A545C /* FactsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsResponse.swift; sourceTree = "<group>"; };
+		BE1ECDD82255A1DE000A545C /* Facts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facts.swift; sourceTree = "<group>"; };
+		BE1ECDDA2256DA08000A545C /* ChuckFactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckFactsTableViewController.swift; sourceTree = "<group>"; };
+		BE1ECDDE225960BB000A545C /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +57,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D623A409306F2409BB4AE9C2 /* Pods_Chuck_Facts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25B7CBC565E50CB1058ADA98 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5833EF3E99E5FFF4DCE5B3EC /* Pods-Chuck Facts.debug.xcconfig */,
+				36DCA0ACFAA5F07BD822BF00 /* Pods-Chuck Facts.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8324F2698EB77C81CF765233 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36D1A015D0CFE00410CA1C7E /* Pods_Chuck_Facts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BE1ECDA222545F98000A545C = {
 			isa = PBXGroup;
 			children = (
 				BE1ECDAD22545F98000A545C /* Chuck Facts */,
 				BE1ECDAC22545F98000A545C /* Products */,
+				25B7CBC565E50CB1058ADA98 /* Pods */,
+				8324F2698EB77C81CF765233 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +102,74 @@
 		BE1ECDAD22545F98000A545C /* Chuck Facts */ = {
 			isa = PBXGroup;
 			children = (
+				BE1ECDDC2258E14C000A545C /* Search */,
+				BE1ECDC422546A14000A545C /* Service */,
 				BE1ECDAE22545F98000A545C /* AppDelegate.swift */,
-				BE1ECDB022545F98000A545C /* ViewController.swift */,
 				BE1ECDB222545F98000A545C /* Main.storyboard */,
 				BE1ECDB522545F99000A545C /* Assets.xcassets */,
 				BE1ECDB722545F99000A545C /* LaunchScreen.storyboard */,
 				BE1ECDBA22545F99000A545C /* Info.plist */,
 			);
 			path = "Chuck Facts";
+			sourceTree = "<group>";
+		};
+		BE1ECDC422546A14000A545C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				BE1ECDD422559FDA000A545C /* Facts */,
+				BE1ECDC722546B0E000A545C /* Suggestions */,
+				BE1ECDC522546A2D000A545C /* BaseService.swift */,
+				BE1ECDDA2256DA08000A545C /* ChuckFactsTableViewController.swift */,
+				BE1ECDCA225585EC000A545C /* DataManager.swift */,
+				BE1ECDCC22558974000A545C /* RequestResult.swift */,
+				BE1ECDD222559C9C000A545C /* BaseServiceData.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		BE1ECDC722546B0E000A545C /* Suggestions */ = {
+			isa = PBXGroup;
+			children = (
+				BE1ECDC822546B39000A545C /* CategoriesService.swift */,
+			);
+			path = Suggestions;
+			sourceTree = "<group>";
+		};
+		BE1ECDD422559FDA000A545C /* Facts */ = {
+			isa = PBXGroup;
+			children = (
+				BE1ECDD022559B98000A545C /* SearchFactsService.swift */,
+				BE1ECDD522559FE7000A545C /* Model */,
+			);
+			path = Facts;
+			sourceTree = "<group>";
+		};
+		BE1ECDD522559FE7000A545C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BE1ECDD62255A041000A545C /* FactsResponse.swift */,
+				BE1ECDD82255A1DE000A545C /* Facts.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BE1ECDDC2258E14C000A545C /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				BE1ECDDD2258E16C000A545C /* view */,
+				BE1ECDC02254649E000A545C /* SuggestionsViewModel.swift */,
+				BE1ECDDE225960BB000A545C /* SearchViewModel.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		BE1ECDDD2258E16C000A545C /* view */ = {
+			isa = PBXGroup;
+			children = (
+				BE1ECDB022545F98000A545C /* SearchViewController.swift */,
+				BE1ECDC222546644000A545C /* SuggestionsCollectionViewCell.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +179,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE1ECDBD22545F99000A545C /* Build configuration list for PBXNativeTarget "Chuck Facts" */;
 			buildPhases = (
+				2AA24D4EAE779914FBCBD773 /* [CP] Check Pods Manifest.lock */,
 				BE1ECDA722545F98000A545C /* Sources */,
 				BE1ECDA822545F98000A545C /* Frameworks */,
 				BE1ECDA922545F98000A545C /* Resources */,
+				420A5E79E23958DE42645443 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +240,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2AA24D4EAE779914FBCBD773 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chuck Facts-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		420A5E79E23958DE42645443 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Chuck Facts/Pods-Chuck Facts-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bond/Bond.framework",
+				"${BUILT_PRODUCTS_DIR}/Differ/Differ.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveKit/ReactiveKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bond.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differ.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chuck Facts/Pods-Chuck Facts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BE1ECDA722545F98000A545C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE1ECDB122545F98000A545C /* ViewController.swift in Sources */,
+				BE1ECDC322546644000A545C /* SuggestionsCollectionViewCell.swift in Sources */,
+				BE1ECDC12254649E000A545C /* SuggestionsViewModel.swift in Sources */,
+				BE1ECDD72255A041000A545C /* FactsResponse.swift in Sources */,
+				BE1ECDB122545F98000A545C /* SearchViewController.swift in Sources */,
+				BE1ECDCB225585EC000A545C /* DataManager.swift in Sources */,
+				BE1ECDC622546A2D000A545C /* BaseService.swift in Sources */,
 				BE1ECDAF22545F98000A545C /* AppDelegate.swift in Sources */,
+				BE1ECDD322559C9C000A545C /* BaseServiceData.swift in Sources */,
+				BE1ECDDF225960BB000A545C /* SearchViewModel.swift in Sources */,
+				BE1ECDDB2256DA08000A545C /* ChuckFactsTableViewController.swift in Sources */,
+				BE1ECDD92255A1DE000A545C /* Facts.swift in Sources */,
+				BE1ECDCD22558974000A545C /* RequestResult.swift in Sources */,
+				BE1ECDD122559B98000A545C /* SearchFactsService.swift in Sources */,
+				BE1ECDC922546B39000A545C /* CategoriesService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +447,7 @@
 		};
 		BE1ECDBE22545F99000A545C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5833EF3E99E5FFF4DCE5B3EC /* Pods-Chuck Facts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +466,7 @@
 		};
 		BE1ECDBF22545F99000A545C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36DCA0ACFAA5F07BD822BF00 /* Pods-Chuck Facts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
