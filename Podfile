@@ -7,5 +7,7 @@ target 'Chuck Facts' do
 
   # Pods for Chuck Facts
   pod 'Alamofire'
+  pod 'Bond'
+  
 
 end
