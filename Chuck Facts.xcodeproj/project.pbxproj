@@ -76,6 +76,7 @@
 		BE79E981225EDE39003BB70D /* ChuckFactsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChuckFactsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE79E983225EDE39003BB70D /* ChuckFactsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckFactsTests.swift; sourceTree = "<group>"; };
 		BE79E985225EDE39003BB70D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE79E98B225EEFE8003BB70D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BE7D9CFC225C381000F97C4C /* FactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsTableViewCell.swift; sourceTree = "<group>"; };
 		BE7D9CFD225C381000F97C4C /* FactsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FactsTableViewCell.xib; sourceTree = "<group>"; };
 		BE7D9D00225D64FE00F97C4C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -120,6 +121,7 @@
 		BE1ECDA222545F98000A545C = {
 			isa = PBXGroup;
 			children = (
+				BE79E98B225EEFE8003BB70D /* README.md */,
 				BE1ECDAD22545F98000A545C /* Chuck Facts */,
 				BE79E982225EDE39003BB70D /* ChuckFactsTests */,
 				BE1ECDAC22545F98000A545C /* Products */,

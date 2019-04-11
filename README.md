@@ -7,8 +7,6 @@ The API used to get this informations was https://api.chucknorris.io/.
 
 - [Alamofire](https://github.com/Alamofire/Alamofire)
 - [Bond](https://github.com/DeclarativeHub/Bond)
-- [x] Search Chuck Facts 
-- [x] Search Chuck Facts by category
 
 ## Requirements
 
