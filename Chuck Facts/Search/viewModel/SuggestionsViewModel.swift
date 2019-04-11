@@ -14,7 +14,7 @@ class SuggestionsViewModel {
     var listSuggestions = Observable<[String]>([])
 
     init() {
-        listSuggestions.value = DataManager.loadSuggestions()
+        listSuggestions.value = DataManager.loadSuggestions().shuffled()
         if listSuggestions.value.isEmpty {
             fetchSuggestions()
         }
