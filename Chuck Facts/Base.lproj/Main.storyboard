@@ -1,34 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="StI-zG-xhN">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search View Controller-->
+        <!--Search Facts-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SearchViewController" customModule="Chuck_Facts" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Search Facts" id="BYZ-38-t0r" customClass="SearchViewController" customModule="Chuck_Facts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your search term" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vTL-gr-vxt">
-                                <rect key="frame" x="32" y="76" width="350" height="30"/>
+                                <rect key="frame" x="32" y="104" width="350" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="search"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="T4a-8Y-EUc">
-                                <rect key="frame" x="32" y="138" width="350" height="692"/>
+                                <rect key="frame" x="32" y="166" width="350" height="680"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CuR-mh-D3o">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="344"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="338"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suggestions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dij-Cu-nIg">
                                                 <rect key="frame" x="4" y="2" width="342" height="26.5"/>
@@ -37,7 +36,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="h8s-Q9-TR2">
-                                                <rect key="frame" x="4" y="30.5" width="342" height="309.5"/>
+                                                <rect key="frame" x="4" y="30.5" width="342" height="303.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FQy-5X-Jhr">
                                                     <size key="itemSize" width="93" height="32"/>
@@ -91,7 +90,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o91-FC-Elo">
-                                        <rect key="frame" x="0.0" y="348" width="350" height="344"/>
+                                        <rect key="frame" x="0.0" y="342" width="350" height="338"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Past Searches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44X-a6-faT">
                                                 <rect key="frame" x="4" y="2" width="332" height="26.5"/>
@@ -100,7 +99,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9ha-nQ-xRf">
-                                                <rect key="frame" x="4" y="30.5" width="342" height="309.5"/>
+                                                <rect key="frame" x="4" y="30.5" width="342" height="303.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
                                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="EIh-oB-Ych"/>
@@ -125,10 +124,10 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T4a-8Y-EUc" secondAttribute="trailing" constant="32" id="8qK-Zg-E0v"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="T4a-8Y-EUc" secondAttribute="bottom" constant="32" id="BFJ-dQ-eJu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="T4a-8Y-EUc" secondAttribute="bottom" constant="16" id="BFJ-dQ-eJu"/>
                             <constraint firstItem="T4a-8Y-EUc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="LTO-U8-xyM"/>
                             <constraint firstItem="vTL-gr-vxt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="Q6x-xF-NpK"/>
-                            <constraint firstItem="vTL-gr-vxt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="evR-Ih-5gw"/>
+                            <constraint firstItem="vTL-gr-vxt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="evR-Ih-5gw"/>
                             <constraint firstItem="T4a-8Y-EUc" firstAttribute="top" secondItem="vTL-gr-vxt" secondAttribute="bottom" constant="32" id="hBe-e2-hLq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vTL-gr-vxt" secondAttribute="trailing" constant="32" id="tSO-3o-2xa"/>
                         </constraints>
@@ -136,18 +135,18 @@
                     </view>
                     <connections>
                         <outlet property="searchTextField" destination="vTL-gr-vxt" id="oxU-NS-oe0"/>
-                        <segue destination="dNU-Ta-8yj" kind="show" identifier="goList" id="bUp-4m-YRN"/>
+                        <outlet property="suggestionsCollection" destination="h8s-Q9-TR2" id="i0a-ie-kN7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="44.927536231884062" y="84.375"/>
+            <point key="canvasLocation" x="2832" y="84"/>
         </scene>
-        <!--Chuck Facts Table View Controller-->
+        <!--Chuck Norris Fact-->
         <scene sceneID="5M5-k9-FNU">
             <objects>
                 <tableViewController id="dNU-Ta-8yj" customClass="ChuckFactsTableViewController" customModule="Chuck_Facts" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rxo-0D-04N">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rxo-0D-04N">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -156,7 +155,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6F7-Zh-3BS" id="6dt-YV-Pkw">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -166,10 +165,41 @@
                             <outlet property="delegate" destination="dNU-Ta-8yj" id="Wyz-FM-sUv"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Chuck Norris Fact" id="tJW-X7-NMh">
+                        <barButtonItem key="backBarButtonItem" title="   " id="Ynx-hb-uca"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="REM-1i-QOu">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="qL3-lK-yHC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RdR-81-aiS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="84"/>
+            <point key="canvasLocation" x="1881.1594202898552" y="83.705357142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Lnw-gv-UNO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="StI-zG-xhN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" backIndicatorImage=" " id="KuG-Ql-1zt">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dNU-Ta-8yj" kind="relationship" relationship="rootViewController" id="hsH-5R-JM6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RYI-bS-Bnh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="971.01449275362324" y="83.705357142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name=" " width="16" height="16"/>
+    </resources>
 </document>

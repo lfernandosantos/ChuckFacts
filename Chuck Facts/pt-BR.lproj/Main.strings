@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "Past Searches"; ObjectID = "44X-a6-faT"; */
+"44X-a6-faT.text" = "Past Searches";
+
+/* Class = "UIViewController"; title = "Search Facts"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "Search Facts";
+
+/* Class = "UIBarButtonItem"; title = "   "; ObjectID = "Ynx-hb-uca"; */
+"Ynx-hb-uca.title" = "   ";
+
+/* Class = "UILabel"; text = "Suggestions"; ObjectID = "dij-Cu-nIg"; */
+"dij-Cu-nIg.text" = "Suggestions";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "m3H-Xd-89T"; */
+"m3H-Xd-89T.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Chuck Norris Fact"; ObjectID = "tJW-X7-NMh"; */
+"tJW-X7-NMh.title" = "Chuck Norris Fact";
+
+/* Class = "UITextField"; placeholder = "Enter your search term"; ObjectID = "vTL-gr-vxt"; */
+"vTL-gr-vxt.placeholder" = "Enter your search term";

@@ -24,6 +24,13 @@
 		BE1ECDD92255A1DE000A545C /* Facts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1ECDD82255A1DE000A545C /* Facts.swift */; };
 		BE1ECDDB2256DA08000A545C /* ChuckFactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1ECDDA2256DA08000A545C /* ChuckFactsTableViewController.swift */; };
 		BE1ECDDF225960BB000A545C /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1ECDDE225960BB000A545C /* SearchViewModel.swift */; };
+		BE79E96C225EC26F003BB70D /* ChuckFactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE79E96B225EC26F003BB70D /* ChuckFactsViewModel.swift */; };
+		BE79E971225EC8E1003BB70D /* StringFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE79E970225EC8E1003BB70D /* StringFile.swift */; };
+		BE79E973225ECB89003BB70D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE79E972225ECB89003BB70D /* Extensions.swift */; };
+		BE79E977225ECFDF003BB70D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE79E979225ECFDF003BB70D /* Localizable.strings */; };
+		BE7D9CFE225C381000F97C4C /* FactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D9CFC225C381000F97C4C /* FactsTableViewCell.swift */; };
+		BE7D9CFF225C381000F97C4C /* FactsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE7D9CFD225C381000F97C4C /* FactsTableViewCell.xib */; };
+		BE7D9D01225D64FE00F97C4C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D9D00225D64FE00F97C4C /* Constants.swift */; };
 		D623A409306F2409BB4AE9C2 /* Pods_Chuck_Facts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D1A015D0CFE00410CA1C7E /* Pods_Chuck_Facts.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +57,14 @@
 		BE1ECDD82255A1DE000A545C /* Facts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facts.swift; sourceTree = "<group>"; };
 		BE1ECDDA2256DA08000A545C /* ChuckFactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckFactsTableViewController.swift; sourceTree = "<group>"; };
 		BE1ECDDE225960BB000A545C /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		BE79E96B225EC26F003BB70D /* ChuckFactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckFactsViewModel.swift; sourceTree = "<group>"; };
+		BE79E970225EC8E1003BB70D /* StringFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFile.swift; sourceTree = "<group>"; };
+		BE79E972225ECB89003BB70D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		BE79E978225ECFDF003BB70D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BE79E97A225ECFF7003BB70D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		BE7D9CFC225C381000F97C4C /* FactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsTableViewCell.swift; sourceTree = "<group>"; };
+		BE7D9CFD225C381000F97C4C /* FactsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FactsTableViewCell.xib; sourceTree = "<group>"; };
+		BE7D9D00225D64FE00F97C4C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +117,7 @@
 		BE1ECDAD22545F98000A545C /* Chuck Facts */ = {
 			isa = PBXGroup;
 			children = (
+				BE79E968225EC233003BB70D /* Facts */,
 				BE1ECDDC2258E14C000A545C /* Search */,
 				BE1ECDC422546A14000A545C /* Service */,
 				BE1ECDAE22545F98000A545C /* AppDelegate.swift */,
@@ -109,6 +125,9 @@
 				BE1ECDB522545F99000A545C /* Assets.xcassets */,
 				BE1ECDB722545F99000A545C /* LaunchScreen.storyboard */,
 				BE1ECDBA22545F99000A545C /* Info.plist */,
+				BE7D9D00225D64FE00F97C4C /* Constants.swift */,
+				BE79E979225ECFDF003BB70D /* Localizable.strings */,
+				BE79E970225EC8E1003BB70D /* StringFile.swift */,
 			);
 			path = "Chuck Facts";
 			sourceTree = "<group>";
@@ -119,10 +138,10 @@
 				BE1ECDD422559FDA000A545C /* Facts */,
 				BE1ECDC722546B0E000A545C /* Suggestions */,
 				BE1ECDC522546A2D000A545C /* BaseService.swift */,
-				BE1ECDDA2256DA08000A545C /* ChuckFactsTableViewController.swift */,
 				BE1ECDCA225585EC000A545C /* DataManager.swift */,
 				BE1ECDCC22558974000A545C /* RequestResult.swift */,
 				BE1ECDD222559C9C000A545C /* BaseServiceData.swift */,
+				BE79E972225ECB89003BB70D /* Extensions.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -148,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				BE1ECDD62255A041000A545C /* FactsResponse.swift */,
-				BE1ECDD82255A1DE000A545C /* Facts.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -156,9 +174,8 @@
 		BE1ECDDC2258E14C000A545C /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				BE7D9CF9225C198A00F97C4C /* viewModel */,
 				BE1ECDDD2258E16C000A545C /* view */,
-				BE1ECDC02254649E000A545C /* SuggestionsViewModel.swift */,
-				BE1ECDDE225960BB000A545C /* SearchViewModel.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -170,6 +187,51 @@
 				BE1ECDC222546644000A545C /* SuggestionsCollectionViewCell.swift */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		BE79E968225EC233003BB70D /* Facts */ = {
+			isa = PBXGroup;
+			children = (
+				BE79E96D225EC42D003BB70D /* model */,
+				BE79E96A225EC25B003BB70D /* viewModel */,
+				BE79E969225EC247003BB70D /* view */,
+			);
+			path = Facts;
+			sourceTree = "<group>";
+		};
+		BE79E969225EC247003BB70D /* view */ = {
+			isa = PBXGroup;
+			children = (
+				BE1ECDDA2256DA08000A545C /* ChuckFactsTableViewController.swift */,
+				BE7D9CFC225C381000F97C4C /* FactsTableViewCell.swift */,
+				BE7D9CFD225C381000F97C4C /* FactsTableViewCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		BE79E96A225EC25B003BB70D /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BE79E96B225EC26F003BB70D /* ChuckFactsViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		BE79E96D225EC42D003BB70D /* model */ = {
+			isa = PBXGroup;
+			children = (
+				BE1ECDD82255A1DE000A545C /* Facts.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		BE7D9CF9225C198A00F97C4C /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BE1ECDDE225960BB000A545C /* SearchViewModel.swift */,
+				BE1ECDC02254649E000A545C /* SuggestionsViewModel.swift */,
+			);
+			path = viewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +278,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = BE1ECDA222545F98000A545C;
 			productRefGroup = BE1ECDAC22545F98000A545C /* Products */;
@@ -232,9 +295,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE79E977225ECFDF003BB70D /* Localizable.strings in Resources */,
 				BE1ECDB922545F99000A545C /* LaunchScreen.storyboard in Resources */,
 				BE1ECDB622545F99000A545C /* Assets.xcassets in Resources */,
 				BE1ECDB422545F98000A545C /* Main.storyboard in Resources */,
+				BE7D9CFF225C381000F97C4C /* FactsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,12 +362,17 @@
 				BE1ECDCB225585EC000A545C /* DataManager.swift in Sources */,
 				BE1ECDC622546A2D000A545C /* BaseService.swift in Sources */,
 				BE1ECDAF22545F98000A545C /* AppDelegate.swift in Sources */,
+				BE7D9D01225D64FE00F97C4C /* Constants.swift in Sources */,
 				BE1ECDD322559C9C000A545C /* BaseServiceData.swift in Sources */,
 				BE1ECDDF225960BB000A545C /* SearchViewModel.swift in Sources */,
+				BE79E96C225EC26F003BB70D /* ChuckFactsViewModel.swift in Sources */,
+				BE7D9CFE225C381000F97C4C /* FactsTableViewCell.swift in Sources */,
 				BE1ECDDB2256DA08000A545C /* ChuckFactsTableViewController.swift in Sources */,
 				BE1ECDD92255A1DE000A545C /* Facts.swift in Sources */,
+				BE79E971225EC8E1003BB70D /* StringFile.swift in Sources */,
 				BE1ECDCD22558974000A545C /* RequestResult.swift in Sources */,
 				BE1ECDD122559B98000A545C /* SearchFactsService.swift in Sources */,
+				BE79E973225ECB89003BB70D /* Extensions.swift in Sources */,
 				BE1ECDC922546B39000A545C /* CategoriesService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,6 +396,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		BE79E979225ECFDF003BB70D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE79E978225ECFDF003BB70D /* en */,
+				BE79E97A225ECFF7003BB70D /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -333,6 +412,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -394,6 +474,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -453,6 +534,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JQ52M4QL3U;
 				INFOPLIST_FILE = "Chuck Facts/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -472,6 +554,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JQ52M4QL3U;
 				INFOPLIST_FILE = "Chuck Facts/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
