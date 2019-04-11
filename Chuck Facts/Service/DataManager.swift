@@ -24,7 +24,7 @@ class DataManager {
     }
 
     static func saveLastSearch(_ search: String) {
-        var list = [String] (loadSearchs().reversed())
+        let list = [String] (loadSearchs().reversed())
 
         var newList = list.filter { $0 != search }
 

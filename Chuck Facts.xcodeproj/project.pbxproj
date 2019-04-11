@@ -28,11 +28,22 @@
 		BE79E971225EC8E1003BB70D /* StringFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE79E970225EC8E1003BB70D /* StringFile.swift */; };
 		BE79E973225ECB89003BB70D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE79E972225ECB89003BB70D /* Extensions.swift */; };
 		BE79E977225ECFDF003BB70D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE79E979225ECFDF003BB70D /* Localizable.strings */; };
+		BE79E984225EDE39003BB70D /* ChuckFactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE79E983225EDE39003BB70D /* ChuckFactsTests.swift */; };
 		BE7D9CFE225C381000F97C4C /* FactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D9CFC225C381000F97C4C /* FactsTableViewCell.swift */; };
 		BE7D9CFF225C381000F97C4C /* FactsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE7D9CFD225C381000F97C4C /* FactsTableViewCell.xib */; };
 		BE7D9D01225D64FE00F97C4C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D9D00225D64FE00F97C4C /* Constants.swift */; };
 		D623A409306F2409BB4AE9C2 /* Pods_Chuck_Facts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D1A015D0CFE00410CA1C7E /* Pods_Chuck_Facts.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BE79E986225EDE39003BB70D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE1ECDA322545F98000A545C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE1ECDAA22545F98000A545C;
+			remoteInfo = "Chuck Facts";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		36D1A015D0CFE00410CA1C7E /* Pods_Chuck_Facts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chuck_Facts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +73,9 @@
 		BE79E972225ECB89003BB70D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BE79E978225ECFDF003BB70D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BE79E97A225ECFF7003BB70D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		BE79E981225EDE39003BB70D /* ChuckFactsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChuckFactsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE79E983225EDE39003BB70D /* ChuckFactsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckFactsTests.swift; sourceTree = "<group>"; };
+		BE79E985225EDE39003BB70D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE7D9CFC225C381000F97C4C /* FactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsTableViewCell.swift; sourceTree = "<group>"; };
 		BE7D9CFD225C381000F97C4C /* FactsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FactsTableViewCell.xib; sourceTree = "<group>"; };
 		BE7D9D00225D64FE00F97C4C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -73,6 +87,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D623A409306F2409BB4AE9C2 /* Pods_Chuck_Facts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE79E97E225EDE39003BB70D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				BE1ECDAD22545F98000A545C /* Chuck Facts */,
+				BE79E982225EDE39003BB70D /* ChuckFactsTests */,
 				BE1ECDAC22545F98000A545C /* Products */,
 				25B7CBC565E50CB1058ADA98 /* Pods */,
 				8324F2698EB77C81CF765233 /* Frameworks */,
@@ -110,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				BE1ECDAB22545F98000A545C /* Chuck Facts.app */,
+				BE79E981225EDE39003BB70D /* ChuckFactsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,6 +140,8 @@
 		BE1ECDAD22545F98000A545C /* Chuck Facts */ = {
 			isa = PBXGroup;
 			children = (
+				BE79E97C225EDD72003BB70D /* Utils */,
+				BE79E97B225EDD1E003BB70D /* Resources */,
 				BE79E968225EC233003BB70D /* Facts */,
 				BE1ECDDC2258E14C000A545C /* Search */,
 				BE1ECDC422546A14000A545C /* Service */,
@@ -125,9 +150,6 @@
 				BE1ECDB522545F99000A545C /* Assets.xcassets */,
 				BE1ECDB722545F99000A545C /* LaunchScreen.storyboard */,
 				BE1ECDBA22545F99000A545C /* Info.plist */,
-				BE7D9D00225D64FE00F97C4C /* Constants.swift */,
-				BE79E979225ECFDF003BB70D /* Localizable.strings */,
-				BE79E970225EC8E1003BB70D /* StringFile.swift */,
 			);
 			path = "Chuck Facts";
 			sourceTree = "<group>";
@@ -141,7 +163,6 @@
 				BE1ECDCA225585EC000A545C /* DataManager.swift */,
 				BE1ECDCC22558974000A545C /* RequestResult.swift */,
 				BE1ECDD222559C9C000A545C /* BaseServiceData.swift */,
-				BE79E972225ECB89003BB70D /* Extensions.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -225,6 +246,33 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		BE79E97B225EDD1E003BB70D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BE79E970225EC8E1003BB70D /* StringFile.swift */,
+				BE79E979225ECFDF003BB70D /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BE79E97C225EDD72003BB70D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BE7D9D00225D64FE00F97C4C /* Constants.swift */,
+				BE79E972225ECB89003BB70D /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BE79E982225EDE39003BB70D /* ChuckFactsTests */ = {
+			isa = PBXGroup;
+			children = (
+				BE79E983225EDE39003BB70D /* ChuckFactsTests.swift */,
+				BE79E985225EDE39003BB70D /* Info.plist */,
+			);
+			path = ChuckFactsTests;
+			sourceTree = "<group>";
+		};
 		BE7D9CF9225C198A00F97C4C /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +304,24 @@
 			productReference = BE1ECDAB22545F98000A545C /* Chuck Facts.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BE79E980225EDE39003BB70D /* ChuckFactsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE79E988225EDE39003BB70D /* Build configuration list for PBXNativeTarget "ChuckFactsTests" */;
+			buildPhases = (
+				BE79E97D225EDE39003BB70D /* Sources */,
+				BE79E97E225EDE39003BB70D /* Frameworks */,
+				BE79E97F225EDE39003BB70D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE79E987225EDE39003BB70D /* PBXTargetDependency */,
+			);
+			name = ChuckFactsTests;
+			productName = ChuckFactsTests;
+			productReference = BE79E981225EDE39003BB70D /* ChuckFactsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -268,6 +334,10 @@
 				TargetAttributes = {
 					BE1ECDAA22545F98000A545C = {
 						CreatedOnToolsVersion = 10.2;
+					};
+					BE79E980225EDE39003BB70D = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = BE1ECDAA22545F98000A545C;
 					};
 				};
 			};
@@ -286,6 +356,7 @@
 			projectRoot = "";
 			targets = (
 				BE1ECDAA22545F98000A545C /* Chuck Facts */,
+				BE79E980225EDE39003BB70D /* ChuckFactsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -300,6 +371,13 @@
 				BE1ECDB622545F99000A545C /* Assets.xcassets in Resources */,
 				BE1ECDB422545F98000A545C /* Main.storyboard in Resources */,
 				BE7D9CFF225C381000F97C4C /* FactsTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE79E97F225EDE39003BB70D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,7 +455,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BE79E97D225EDE39003BB70D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE79E984225EDE39003BB70D /* ChuckFactsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BE79E987225EDE39003BB70D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE1ECDAA22545F98000A545C /* Chuck Facts */;
+			targetProxy = BE79E986225EDE39003BB70D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BE1ECDB222545F98000A545C /* Main.storyboard */ = {
@@ -566,6 +660,46 @@
 			};
 			name = Release;
 		};
+		BE79E989225EDE39003BB70D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JQ52M4QL3U;
+				INFOPLIST_FILE = ChuckFactsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.lf.ChuckFactsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chuck Facts.app/Chuck Facts";
+			};
+			name = Debug;
+		};
+		BE79E98A225EDE39003BB70D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JQ52M4QL3U;
+				INFOPLIST_FILE = ChuckFactsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.lf.ChuckFactsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chuck Facts.app/Chuck Facts";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -583,6 +717,15 @@
 			buildConfigurations = (
 				BE1ECDBE22545F99000A545C /* Debug */,
 				BE1ECDBF22545F99000A545C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE79E988225EDE39003BB70D /* Build configuration list for PBXNativeTarget "ChuckFactsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE79E989225EDE39003BB70D /* Debug */,
+				BE79E98A225EDE39003BB70D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
