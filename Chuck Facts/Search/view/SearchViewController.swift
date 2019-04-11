@@ -10,18 +10,19 @@ import UIKit
 import Alamofire
 import Bond
 
-
 class SearchViewController: UIViewController {
 
     var suggestionsViewModel = SuggestionsViewModel()
     var searchViewModel = SearchViewModel()
-
     var facts = Observable<[Fact]>([])
+    var chuckFactListDelegate: ChuckFactsDelegate?
 
     @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var suggestionsCollection: UICollectionView!
 
-    func performSegueSearchList() {
-        self.performSegue(withIdentifier: "goList", sender: searchViewModel.facts.value)
+    func showFactsList() {
+        chuckFactListDelegate?.factsViewModel.facts.value = searchViewModel.facts.value
+        self.navigationController?.popViewController(animated: true)
     }
 
 
@@ -29,15 +30,18 @@ class SearchViewController: UIViewController {
         return DataManager.loadSearchs()
     }
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        suggestionsCollection.delegate = self
         searchTextField.delegate = self
-
         searchViewModel.facts.bind(to: self) { _ , _ in
             if self.searchViewModel.facts.value.count > 0 {
-                self.performSegueSearchList()
+                self.showFactsList()
             }
+        }
+
+        suggestionsViewModel.listSuggestions.bind(to: self) { _,_ in
+            self.suggestionsCollection.reloadData()
         }
     }
 }
@@ -47,7 +51,7 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath)
             if let cell = cell as? SuggestionsCollectionViewCell {
-                cell.label.text = suggestionsViewModel.listSuggestions[indexPath.row]
+                cell.label.text = suggestionsViewModel.listSuggestions.value[indexPath.row]
 
             }
 
@@ -55,11 +59,14 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        if suggestionsViewModel.listSuggestions.value.count > 8 {
+            return 8
+        }
+        return suggestionsViewModel.listSuggestions.value.count
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        searchViewModel.searchWith(suggestions: suggestionsViewModel.listSuggestions[indexPath.row])
+        searchViewModel.searchWith(suggestions: suggestionsViewModel.listSuggestions.value[indexPath.row])
     }
 }
 
@@ -85,12 +92,6 @@ extension SearchViewController: UITabBarDelegate, UITableViewDataSource, UITable
         return lasSearchList.count
     }
 
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if var tableVC = segue.destination as? ChuckFactsDelegate {
-            tableVC.list = sender as! [Fact]
-        }
-    }
 }
 
 
