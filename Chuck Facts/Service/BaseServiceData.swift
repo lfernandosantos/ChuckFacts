@@ -30,10 +30,12 @@ extension BaseEndPoint: BaseServiceData {
             return "categories"
 
         case .searchFacts(let query):
-            return "search?query=\(query)"
+            let queryUrl = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? " "
+            return "search?query=\(queryUrl)"
 
         case .searchFactsByCategory(let query):
-            return "random?category=\(query)"
+            let queryUrl = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? " "
+            return "random?category=\(queryUrl)"
         }
     }
 }
