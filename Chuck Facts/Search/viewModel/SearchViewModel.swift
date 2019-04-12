@@ -20,6 +20,7 @@ class SearchViewModel {
                 print(error)
             case .success(let fact):
                 if let fact = fact {
+                    self.saveResult(facts: [fact])
                     self.facts.value = [FactViewModel(fact: fact)]
                 }
             }
@@ -35,12 +36,19 @@ class SearchViewModel {
             case .success(let searchFact):
                 if searchFact.count > 0 {
                      DataManager.saveLastSearch(query)
+                    self.saveResult(facts: searchFact)
                     let listViewModel = searchFact.map({ (item) -> FactViewModel in
                         return FactViewModel(fact: item)
                     })
                     self.facts.value = listViewModel
                 }
             }
+        }
+    }
+
+    func saveResult(facts: [Fact]) {
+        facts.forEach { (item) in
+            FactEntity.save(fact: item, persistence: PersistenceManager.shared)
         }
     }
 }
