@@ -43,7 +43,6 @@ class PersistenceManager {
         if context.hasChanges {
             do {
                 try context.save()
-                print("save core data")
             } catch {
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")

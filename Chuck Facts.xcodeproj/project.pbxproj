@@ -288,8 +288,7 @@
 		BE79E9922260131F003BB70D /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				BE79E996226014AD003BB70D /* FactEntity+CoreDataClass.swift */,
-				BE79E995226014AD003BB70D /* FactEntity+CoreDataProperties.swift */,
+				BED0D77D2260340A004F1AD5 /* Entities */,
 				BE79E9932260139F003BB70D /* PersistenceManager.swift */,
 			);
 			path = Database;
@@ -302,6 +301,15 @@
 				BE1ECDC02254649E000A545C /* SuggestionsViewModel.swift */,
 			);
 			path = viewModel;
+			sourceTree = "<group>";
+		};
+		BED0D77D2260340A004F1AD5 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				BE79E996226014AD003BB70D /* FactEntity+CoreDataClass.swift */,
+				BE79E995226014AD003BB70D /* FactEntity+CoreDataProperties.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

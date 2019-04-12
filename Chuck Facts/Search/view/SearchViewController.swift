@@ -20,20 +20,22 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var suggestionsCollection: UICollectionView!
 
-    func showFactsList() {
-        chuckFactListDelegate?.factsViewModel.facts.value = searchViewModel.facts.value
-        self.navigationController?.popViewController(animated: true)
-    }
-
-
     var lasSearchList: [String] {
         return DataManager.loadSearchs()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         suggestionsCollection.delegate = self
         searchTextField.delegate = self
+
+        bindViewModel()
+        hideKeyboardWhenTappedAround()
+    }
+
+
+    func bindViewModel() {
         searchViewModel.facts.bind(to: self) { _ , _ in
             if self.searchViewModel.facts.value.count > 0 {
                 self.showFactsList()
@@ -44,6 +46,19 @@ class SearchViewController: UIViewController {
             self.suggestionsCollection.reloadData()
         }
     }
+
+
+    func showFactsList() {
+        chuckFactListDelegate?.factsViewModel.facts.value = searchViewModel.facts.value
+        self.navigationController?.popViewController(animated: true)
+    }
+
+
+    func hideKeyboardWhenTappedAround(){
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SearchViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
 }
 
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -52,7 +67,6 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath)
             if let cell = cell as? SuggestionsCollectionViewCell {
                 cell.label.text = suggestionsViewModel.listSuggestions.value[indexPath.row]
-
             }
 
         return cell
@@ -97,7 +111,13 @@ extension SearchViewController: UITabBarDelegate, UITableViewDataSource, UITable
 
 extension SearchViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        searchViewModel.searchFacts(query: textField.text!)
+        if let text = textField.text {
+            searchViewModel.searchFacts(query: text)
+        }
         return true
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
