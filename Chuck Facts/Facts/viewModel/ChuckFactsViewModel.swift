@@ -29,9 +29,21 @@ struct FactViewModel {
 
 
 class ChuckFactsViewModel {
-    var facts = Observable<[FactViewModel]>([])
+
+    var facts = Observable<[FactViewModel]>([]) 
+
+    var dbFacts: [FactViewModel] {
+        let data = PersistenceManager.shared.fetch(FactEntity.self)
+        let dbFacts = data.map { (item) -> Fact in
+            return Fact(from: item)
+        }
+        return dbFacts.map({ (item) -> FactViewModel in
+            return FactViewModel(fact: item)
+        })
+    }
 
     init(facts: [FactViewModel]?) {
-        self.facts.value = facts ?? []
+        self.facts.value = facts ?? dbFacts
     }
+
 }
