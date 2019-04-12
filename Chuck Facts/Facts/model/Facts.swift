@@ -42,4 +42,12 @@ struct Fact : Codable {
         return nil
     }
 
+    init(from entity: FactEntity) {
+        self.category = entity.category
+        self.icon_url = entity.icon_url
+        self.id = entity.id
+        self.url = entity.url
+        self.value = entity.value
+    }
+
 }

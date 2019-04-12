@@ -29,6 +29,10 @@
 		BE79E973225ECB89003BB70D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE79E972225ECB89003BB70D /* Extensions.swift */; };
 		BE79E977225ECFDF003BB70D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE79E979225ECFDF003BB70D /* Localizable.strings */; };
 		BE79E984225EDE39003BB70D /* ChuckFactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE79E983225EDE39003BB70D /* ChuckFactsTests.swift */; };
+		BE79E99122600F03003BB70D /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE79E98F22600F03003BB70D /* Database.xcdatamodeld */; };
+		BE79E9942260139F003BB70D /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE79E9932260139F003BB70D /* PersistenceManager.swift */; };
+		BE79E997226014AD003BB70D /* FactEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE79E996226014AD003BB70D /* FactEntity+CoreDataClass.swift */; };
+		BE79E998226014AD003BB70D /* FactEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE79E995226014AD003BB70D /* FactEntity+CoreDataProperties.swift */; };
 		BE7D9CFE225C381000F97C4C /* FactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D9CFC225C381000F97C4C /* FactsTableViewCell.swift */; };
 		BE7D9CFF225C381000F97C4C /* FactsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE7D9CFD225C381000F97C4C /* FactsTableViewCell.xib */; };
 		BE7D9D01225D64FE00F97C4C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D9D00225D64FE00F97C4C /* Constants.swift */; };
@@ -77,6 +81,10 @@
 		BE79E983225EDE39003BB70D /* ChuckFactsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckFactsTests.swift; sourceTree = "<group>"; };
 		BE79E985225EDE39003BB70D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE79E98B225EEFE8003BB70D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BE79E99022600F03003BB70D /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
+		BE79E9932260139F003BB70D /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		BE79E995226014AD003BB70D /* FactEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FactEntity+CoreDataProperties.swift"; path = "/Users/lf.fernandodossantos/workspace/iOS/Chuck Facts/Chuck Facts/Service/Database/FactEntity+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		BE79E996226014AD003BB70D /* FactEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FactEntity+CoreDataClass.swift"; path = "/Users/lf.fernandodossantos/workspace/iOS/Chuck Facts/Chuck Facts/Service/Database/FactEntity+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		BE7D9CFC225C381000F97C4C /* FactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsTableViewCell.swift; sourceTree = "<group>"; };
 		BE7D9CFD225C381000F97C4C /* FactsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FactsTableViewCell.xib; sourceTree = "<group>"; };
 		BE7D9D00225D64FE00F97C4C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -159,6 +167,7 @@
 		BE1ECDC422546A14000A545C /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				BE79E9922260131F003BB70D /* Database */,
 				BE1ECDD422559FDA000A545C /* Facts */,
 				BE1ECDC722546B0E000A545C /* Suggestions */,
 				BE1ECDC522546A2D000A545C /* BaseService.swift */,
@@ -251,6 +260,7 @@
 		BE79E97B225EDD1E003BB70D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BE79E98F22600F03003BB70D /* Database.xcdatamodeld */,
 				BE79E970225EC8E1003BB70D /* StringFile.swift */,
 				BE79E979225ECFDF003BB70D /* Localizable.strings */,
 			);
@@ -273,6 +283,16 @@
 				BE79E985225EDE39003BB70D /* Info.plist */,
 			);
 			path = ChuckFactsTests;
+			sourceTree = "<group>";
+		};
+		BE79E9922260131F003BB70D /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				BE79E996226014AD003BB70D /* FactEntity+CoreDataClass.swift */,
+				BE79E995226014AD003BB70D /* FactEntity+CoreDataProperties.swift */,
+				BE79E9932260139F003BB70D /* PersistenceManager.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 		BE7D9CF9225C198A00F97C4C /* viewModel */ = {
@@ -441,12 +461,16 @@
 				BE1ECDB122545F98000A545C /* SearchViewController.swift in Sources */,
 				BE1ECDCB225585EC000A545C /* DataManager.swift in Sources */,
 				BE1ECDC622546A2D000A545C /* BaseService.swift in Sources */,
+				BE79E99122600F03003BB70D /* Database.xcdatamodeld in Sources */,
+				BE79E9942260139F003BB70D /* PersistenceManager.swift in Sources */,
 				BE1ECDAF22545F98000A545C /* AppDelegate.swift in Sources */,
 				BE7D9D01225D64FE00F97C4C /* Constants.swift in Sources */,
+				BE79E997226014AD003BB70D /* FactEntity+CoreDataClass.swift in Sources */,
 				BE1ECDD322559C9C000A545C /* BaseServiceData.swift in Sources */,
 				BE1ECDDF225960BB000A545C /* SearchViewModel.swift in Sources */,
 				BE79E96C225EC26F003BB70D /* ChuckFactsViewModel.swift in Sources */,
 				BE7D9CFE225C381000F97C4C /* FactsTableViewCell.swift in Sources */,
+				BE79E998226014AD003BB70D /* FactEntity+CoreDataProperties.swift in Sources */,
 				BE1ECDDB2256DA08000A545C /* ChuckFactsTableViewController.swift in Sources */,
 				BE1ECDD92255A1DE000A545C /* Facts.swift in Sources */,
 				BE79E971225EC8E1003BB70D /* StringFile.swift in Sources */,
@@ -733,6 +757,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BE79E98F22600F03003BB70D /* Database.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BE79E99022600F03003BB70D /* Database.xcdatamodel */,
+			);
+			currentVersion = BE79E99022600F03003BB70D /* Database.xcdatamodel */;
+			path = Database.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BE1ECDA322545F98000A545C /* Project object */;
 }

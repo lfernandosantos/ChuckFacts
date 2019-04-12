@@ -31,6 +31,7 @@ class ChuckFactsTableViewController: UITableViewController, ChuckFactsDelegate {
         setup()
 
         bindViewModel()
+
     }
 
 
