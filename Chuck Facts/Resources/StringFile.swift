@@ -10,5 +10,6 @@ import Foundation
 
 enum StringFile: String {
     case emptyList =  "list.empty"
+    case emptySearch = "search.empty"
 }
 

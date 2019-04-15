@@ -7,3 +7,4 @@
 */
 
 "list.empty" = "Nothing to show, \nPressed search button for more facts!";
+"search.empty" = "Nothing to show for this search!";

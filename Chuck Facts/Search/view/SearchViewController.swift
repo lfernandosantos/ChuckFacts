@@ -58,7 +58,7 @@ class SearchViewController: UIViewController {
 
     func showAlert(msg: String?){
         DispatchQueue.main.async {
-            let alertController = UIAlertController(title: "Result zero!", message: msg, preferredStyle: .alert)
+            let alertController = UIAlertController(title: nil, message: msg, preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alertController, animated: true, completion: nil)
         }
