@@ -12,12 +12,13 @@ import Bond
 class SearchViewModel {
 
     var facts = Observable<[FactViewModel]>([])
+    var errorSearch = Observable<String?>("")
 
     func searchWith(suggestions: String) {
         SearchFactsService().fetch(category: suggestions) { (result) in
             switch result{
             case .failure(let error):
-                print(error)
+                self.errorSearch.value = error
             case .success(let fact):
                 if let fact = fact {
                     self.saveResult(facts: [fact])
@@ -27,12 +28,11 @@ class SearchViewModel {
         }
     }
 
-
     func searchFacts(query: String) {
         SearchFactsService().fetch(query: query) { (result) in
             switch result{
             case .failure(let error):
-                print(error)
+                self.errorSearch.value = error
             case .success(let searchFact):
                 if searchFact.count > 0 {
                      DataManager.saveLastSearch(query)
