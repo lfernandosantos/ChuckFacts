@@ -7,15 +7,12 @@
 //
 
 import UIKit
-import Alamofire
 import Bond
 
 class SearchViewController: UIViewController {
 
     var suggestionsViewModel = SuggestionsViewModel()
     var searchViewModel = SearchViewModel()
-    var facts = Observable<[Fact]>([])
-    var chuckFactListDelegate: ChuckFactsDelegate?
 
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var suggestionsCollection: UICollectionView!
@@ -42,6 +39,12 @@ class SearchViewController: UIViewController {
             }
         }
 
+        searchViewModel.errorSearch.bind(to: self) { _ , errorMSG in
+            if let msg = errorMSG, !msg.isEmpty{
+                self.showAlert(msg: msg)
+            }
+        }
+
         suggestionsViewModel.listSuggestions.bind(to: self) { _,_ in
             self.suggestionsCollection.reloadData()
         }
@@ -49,10 +52,17 @@ class SearchViewController: UIViewController {
 
 
     func showFactsList() {
-        chuckFactListDelegate?.factsViewModel.facts.value = searchViewModel.facts.value
         self.navigationController?.popViewController(animated: true)
     }
 
+
+    func showAlert(msg: String?){
+        DispatchQueue.main.async {
+            let alertController = UIAlertController(title: "Result zero!", message: msg, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
 
     func hideKeyboardWhenTappedAround(){
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SearchViewController.dismissKeyboard))
