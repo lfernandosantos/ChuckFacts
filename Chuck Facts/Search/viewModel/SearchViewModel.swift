@@ -41,12 +41,15 @@ class SearchViewModel {
                         return FactViewModel(fact: item)
                     })
                     self.facts.value = listViewModel
+                } else {
+                  self.errorSearch.value = StringFile.emptySearch.rawValue.localized()
                 }
             }
         }
     }
 
-    func saveResult(facts: [Fact]) {
+    private func saveResult(facts: [Fact]) {
+        PersistenceManager.shared.cleanDB(FactEntity.self)
         facts.forEach { (item) in
             FactEntity.save(fact: item, persistence: PersistenceManager.shared)
         }
