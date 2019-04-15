@@ -16,7 +16,7 @@ class FactsTableViewCell: UITableViewCell {
     @IBOutlet weak var shareButton: UIButton!
 
     var postion: Int?
-    var factDelegate: ChuckFactsDelegate?
+    var factDelegate: FactItemPressedDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
