@@ -7,10 +7,8 @@
 //
 
 import Foundation
-import Bond
 
-protocol ChuckFactsDelegate {
-    var factsViewModel: ChuckFactsViewModel {get set}
+protocol FactItemPressedDelegate {
     func clickShareFact(_ at: Int)
 }
 
@@ -28,11 +26,9 @@ struct FactViewModel {
 }
 
 
-class ChuckFactsViewModel {
+struct ChuckFactsViewModel {
 
-    var facts = Observable<[FactViewModel]>([]) 
-
-    var dbFacts: [FactViewModel] {
+    var facts: [FactViewModel] {
         let data = PersistenceManager.shared.fetch(FactEntity.self)
         let dbFacts = data.map { (item) -> Fact in
             return Fact(from: item)
@@ -40,10 +36,6 @@ class ChuckFactsViewModel {
         return dbFacts.map({ (item) -> FactViewModel in
             return FactViewModel(fact: item)
         })
-    }
-
-    init(facts: [FactViewModel]?) {
-        self.facts.value = facts ?? dbFacts
     }
 
 }
