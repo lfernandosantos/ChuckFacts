@@ -168,8 +168,6 @@
 			isa = PBXGroup;
 			children = (
 				BE79E9922260131F003BB70D /* Database */,
-				BE1ECDD422559FDA000A545C /* Facts */,
-				BE1ECDC722546B0E000A545C /* Suggestions */,
 				BE1ECDC522546A2D000A545C /* BaseService.swift */,
 				BE1ECDCA225585EC000A545C /* DataManager.swift */,
 				BE1ECDCC22558974000A545C /* RequestResult.swift */,
@@ -178,34 +176,10 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		BE1ECDC722546B0E000A545C /* Suggestions */ = {
-			isa = PBXGroup;
-			children = (
-				BE1ECDC822546B39000A545C /* CategoriesService.swift */,
-			);
-			path = Suggestions;
-			sourceTree = "<group>";
-		};
-		BE1ECDD422559FDA000A545C /* Facts */ = {
-			isa = PBXGroup;
-			children = (
-				BE1ECDD022559B98000A545C /* SearchFactsService.swift */,
-				BE1ECDD522559FE7000A545C /* Model */,
-			);
-			path = Facts;
-			sourceTree = "<group>";
-		};
-		BE1ECDD522559FE7000A545C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				BE1ECDD62255A041000A545C /* FactsResponse.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		BE1ECDDC2258E14C000A545C /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				BEB63E09226B7DB700BDA65D /* service */,
 				BE7D9CF9225C198A00F97C4C /* viewModel */,
 				BE1ECDDD2258E16C000A545C /* view */,
 			);
@@ -224,6 +198,7 @@
 		BE79E968225EC233003BB70D /* Facts */ = {
 			isa = PBXGroup;
 			children = (
+				BEB63E08226B7D8900BDA65D /* service */,
 				BE79E96D225EC42D003BB70D /* model */,
 				BE79E96A225EC25B003BB70D /* viewModel */,
 				BE79E969225EC247003BB70D /* view */,
@@ -252,6 +227,7 @@
 		BE79E96D225EC42D003BB70D /* model */ = {
 			isa = PBXGroup;
 			children = (
+				BE1ECDD62255A041000A545C /* FactsResponse.swift */,
 				BE1ECDD82255A1DE000A545C /* Facts.swift */,
 			);
 			path = model;
@@ -301,6 +277,22 @@
 				BE1ECDC02254649E000A545C /* SuggestionsViewModel.swift */,
 			);
 			path = viewModel;
+			sourceTree = "<group>";
+		};
+		BEB63E08226B7D8900BDA65D /* service */ = {
+			isa = PBXGroup;
+			children = (
+				BE1ECDD022559B98000A545C /* SearchFactsService.swift */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		BEB63E09226B7DB700BDA65D /* service */ = {
+			isa = PBXGroup;
+			children = (
+				BE1ECDC822546B39000A545C /* CategoriesService.swift */,
+			);
+			path = service;
 			sourceTree = "<group>";
 		};
 		BED0D77D2260340A004F1AD5 /* Entities */ = {
