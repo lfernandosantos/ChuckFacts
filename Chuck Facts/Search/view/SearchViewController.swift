@@ -40,10 +40,27 @@ class SearchViewController: UIViewController {
 
         bindViewModel()
         hideKeyboardWhenTappedAround()
+
     }
 
 
+    func showLoading(){
+        present(alert, animated: true, completion: nil)
+    }
+
     func bindViewModel() {
+        suggestionsViewModel.listSuggestions.bind(to: self) { _,_ in
+            self.suggestionsCollection.reloadData()
+        }
+
+        searchViewModel.searching.bind(to: self) { _, searching in
+            if searching {
+                self.showLoading()
+            } else {
+                self.dismiss(animated: false, completion: nil)
+            }
+        }
+
         searchViewModel.facts.bind(to: self) { _ , _ in
             if self.searchViewModel.facts.value.count > 0 {
                 self.showFactsList()
@@ -54,10 +71,6 @@ class SearchViewController: UIViewController {
             if let msg = errorMSG, !msg.isEmpty{
                 self.showAlert(msg: msg)
             }
-        }
-
-        suggestionsViewModel.listSuggestions.bind(to: self) { _,_ in
-            self.suggestionsCollection.reloadData()
         }
     }
 
