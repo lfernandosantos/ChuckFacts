@@ -29,13 +29,7 @@ struct FactViewModel {
 struct ChuckFactsViewModel {
 
     var facts: [FactViewModel] {
-        let data = PersistenceManager.shared.fetch(FactEntity.self)
-        let dbFacts = data.map { (item) -> Fact in
-            return Fact(from: item)
-        }
-        return dbFacts.map({ (item) -> FactViewModel in
-            return FactViewModel(fact: item)
-        })
+        return FactRepository().getFacts()
     }
 
 }
