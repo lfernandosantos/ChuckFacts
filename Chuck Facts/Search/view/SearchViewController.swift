@@ -21,6 +21,17 @@ class SearchViewController: UIViewController {
         return DataManager.loadSearchs()
     }
 
+    let alert: UIAlertController = {
+        var uialert = UIAlertController(title: nil, message: StringFile.loading.rawValue.localized(), preferredStyle: .alert)
+        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.style = UIActivityIndicatorView.Style.gray
+        loadingIndicator.startAnimating()
+        uialert.view.addSubview(loadingIndicator)
+        return uialert
+        }()
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
