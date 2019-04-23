@@ -9,7 +9,8 @@
 import Foundation
 
 enum StringFile: String {
-    case emptyList =  "list.empty"
-    case emptySearch = "search.empty"
+    case emptyList      =  "list.empty"
+    case emptySearch    = "search.empty"
+    case loading        = "search.loading"
 }
 

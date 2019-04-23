@@ -6,5 +6,6 @@
   Copyright © 2019 LFSantos. All rights reserved.
 */
 
-"list.empty" = "Nothing to show, \nPressed search button for more facts!";
-"search.empty" = "Nothing to show for this search!";
+"list.empty"        = "Nothing to show, \nPressed search button for more facts!";
+"search.empty"      = "Nothing to show for this search!";
+"search.loading"    = "Please wait...";

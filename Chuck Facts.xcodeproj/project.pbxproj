@@ -36,6 +36,7 @@
 		BE7D9CFE225C381000F97C4C /* FactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D9CFC225C381000F97C4C /* FactsTableViewCell.swift */; };
 		BE7D9CFF225C381000F97C4C /* FactsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE7D9CFD225C381000F97C4C /* FactsTableViewCell.xib */; };
 		BE7D9D01225D64FE00F97C4C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D9D00225D64FE00F97C4C /* Constants.swift */; };
+		BEB63E0C226B814100BDA65D /* FactsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB63E0B226B814100BDA65D /* FactsRepository.swift */; };
 		D623A409306F2409BB4AE9C2 /* Pods_Chuck_Facts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D1A015D0CFE00410CA1C7E /* Pods_Chuck_Facts.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,7 @@
 		BE7D9CFC225C381000F97C4C /* FactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsTableViewCell.swift; sourceTree = "<group>"; };
 		BE7D9CFD225C381000F97C4C /* FactsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FactsTableViewCell.xib; sourceTree = "<group>"; };
 		BE7D9D00225D64FE00F97C4C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BEB63E0B226B814100BDA65D /* FactsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 		BE1ECDC422546A14000A545C /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				BEB63E0A226B80EE00BDA65D /* Repository */,
 				BE79E9922260131F003BB70D /* Database */,
 				BE1ECDC522546A2D000A545C /* BaseService.swift */,
 				BE1ECDCA225585EC000A545C /* DataManager.swift */,
@@ -293,6 +296,14 @@
 				BE1ECDC822546B39000A545C /* CategoriesService.swift */,
 			);
 			path = service;
+			sourceTree = "<group>";
+		};
+		BEB63E0A226B80EE00BDA65D /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				BEB63E0B226B814100BDA65D /* FactsRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		BED0D77D2260340A004F1AD5 /* Entities */ = {
@@ -464,6 +475,7 @@
 				BE79E99122600F03003BB70D /* Database.xcdatamodeld in Sources */,
 				BE79E9942260139F003BB70D /* PersistenceManager.swift in Sources */,
 				BE1ECDAF22545F98000A545C /* AppDelegate.swift in Sources */,
+				BEB63E0C226B814100BDA65D /* FactsRepository.swift in Sources */,
 				BE7D9D01225D64FE00F97C4C /* Constants.swift in Sources */,
 				BE79E997226014AD003BB70D /* FactEntity+CoreDataClass.swift in Sources */,
 				BE1ECDD322559C9C000A545C /* BaseServiceData.swift in Sources */,

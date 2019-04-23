@@ -6,5 +6,6 @@
   Copyright © 2019 LFSantos. All rights reserved.
 */
 
-"list.empty" = "Nenhum Fato do Chuck Norris, \nBusque por eles clicando na lupa!";
-"search.empty" = "Nenhum resultado para sua busca!";
+"list.empty"     = "Nenhum Fato do Chuck Norris, \nBusque por eles clicando na lupa!";
+"search.empty"   = "Nenhum resultado para sua busca!";
+"search.loading" = "Aguarde...";
