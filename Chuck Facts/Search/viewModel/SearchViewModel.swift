@@ -13,9 +13,12 @@ class SearchViewModel {
 
     var facts = Observable<[FactViewModel]>([])
     var errorSearch = Observable<String?>("")
+    var searching = Observable<Bool>(false)
 
     func searchWith(suggestions: String) {
+        searching.value = true
         SearchFactsService().fetch(category: suggestions) { (result) in
+            self.searching.value = false
             switch result{
             case .failure(let error):
                 self.errorSearch.value = error
@@ -29,18 +32,17 @@ class SearchViewModel {
     }
 
     func searchFacts(query: String) {
+        searching.value = true
         SearchFactsService().fetch(query: query) { (result) in
+            self.searching.value = false
             switch result{
             case .failure(let error):
                 self.errorSearch.value = error
             case .success(let searchFact):
                 if searchFact.count > 0 {
-                     DataManager.saveLastSearch(query)
-                    self.saveResult(facts: searchFact)
-                    let listViewModel = searchFact.map({ (item) -> FactViewModel in
-                        return FactViewModel(fact: item)
-                    })
-                    self.facts.value = listViewModel
+                    DataManager.saveLastSearch(query)
+                    FactRepository().save(facts: searchFact)
+                    self.facts.value = FactRepository().getFacts()
                 } else {
                   self.errorSearch.value = StringFile.emptySearch.rawValue.localized()
                 }
