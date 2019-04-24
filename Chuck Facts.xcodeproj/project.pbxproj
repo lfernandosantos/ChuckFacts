@@ -31,13 +31,13 @@
 		BE79E984225EDE39003BB70D /* ChuckFactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE79E983225EDE39003BB70D /* ChuckFactsTests.swift */; };
 		BE79E99122600F03003BB70D /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE79E98F22600F03003BB70D /* Database.xcdatamodeld */; };
 		BE79E9942260139F003BB70D /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE79E9932260139F003BB70D /* PersistenceManager.swift */; };
-		BE79E997226014AD003BB70D /* FactEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE79E996226014AD003BB70D /* FactEntity+CoreDataClass.swift */; };
-		BE79E998226014AD003BB70D /* FactEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE79E995226014AD003BB70D /* FactEntity+CoreDataProperties.swift */; };
 		BE7D9CFE225C381000F97C4C /* FactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D9CFC225C381000F97C4C /* FactsTableViewCell.swift */; };
 		BE7D9CFF225C381000F97C4C /* FactsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE7D9CFD225C381000F97C4C /* FactsTableViewCell.xib */; };
 		BE7D9D01225D64FE00F97C4C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D9D00225D64FE00F97C4C /* Constants.swift */; };
 		BEB63E0C226B814100BDA65D /* FactsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB63E0B226B814100BDA65D /* FactsRepository.swift */; };
 		D623A409306F2409BB4AE9C2 /* Pods_Chuck_Facts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D1A015D0CFE00410CA1C7E /* Pods_Chuck_Facts.framework */; };
+		EDFFF3AE2270FF440081A0CD /* FactEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFFF3AC2270FF440081A0CD /* FactEntity+CoreDataProperties.swift */; };
+		EDFFF3AF2270FF440081A0CD /* FactEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFFF3AD2270FF440081A0CD /* FactEntity+CoreDataClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,12 +84,12 @@
 		BE79E98B225EEFE8003BB70D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BE79E99022600F03003BB70D /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
 		BE79E9932260139F003BB70D /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
-		BE79E995226014AD003BB70D /* FactEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FactEntity+CoreDataProperties.swift"; path = "/Users/lf.fernandodossantos/workspace/iOS/Chuck Facts/Chuck Facts/Service/Database/FactEntity+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
-		BE79E996226014AD003BB70D /* FactEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FactEntity+CoreDataClass.swift"; path = "/Users/lf.fernandodossantos/workspace/iOS/Chuck Facts/Chuck Facts/Service/Database/FactEntity+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		BE7D9CFC225C381000F97C4C /* FactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsTableViewCell.swift; sourceTree = "<group>"; };
 		BE7D9CFD225C381000F97C4C /* FactsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FactsTableViewCell.xib; sourceTree = "<group>"; };
 		BE7D9D00225D64FE00F97C4C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BEB63E0B226B814100BDA65D /* FactsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsRepository.swift; sourceTree = "<group>"; };
+		EDFFF3AC2270FF440081A0CD /* FactEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FactEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EDFFF3AD2270FF440081A0CD /* FactEntity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FactEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,8 +309,8 @@
 		BED0D77D2260340A004F1AD5 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				BE79E996226014AD003BB70D /* FactEntity+CoreDataClass.swift */,
-				BE79E995226014AD003BB70D /* FactEntity+CoreDataProperties.swift */,
+				EDFFF3AD2270FF440081A0CD /* FactEntity+CoreDataClass.swift */,
+				EDFFF3AC2270FF440081A0CD /* FactEntity+CoreDataProperties.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -466,6 +466,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDFFF3AF2270FF440081A0CD /* FactEntity+CoreDataClass.swift in Sources */,
 				BE1ECDC322546644000A545C /* SuggestionsCollectionViewCell.swift in Sources */,
 				BE1ECDC12254649E000A545C /* SuggestionsViewModel.swift in Sources */,
 				BE1ECDD72255A041000A545C /* FactsResponse.swift in Sources */,
@@ -477,12 +478,11 @@
 				BE1ECDAF22545F98000A545C /* AppDelegate.swift in Sources */,
 				BEB63E0C226B814100BDA65D /* FactsRepository.swift in Sources */,
 				BE7D9D01225D64FE00F97C4C /* Constants.swift in Sources */,
-				BE79E997226014AD003BB70D /* FactEntity+CoreDataClass.swift in Sources */,
 				BE1ECDD322559C9C000A545C /* BaseServiceData.swift in Sources */,
 				BE1ECDDF225960BB000A545C /* SearchViewModel.swift in Sources */,
 				BE79E96C225EC26F003BB70D /* ChuckFactsViewModel.swift in Sources */,
 				BE7D9CFE225C381000F97C4C /* FactsTableViewCell.swift in Sources */,
-				BE79E998226014AD003BB70D /* FactEntity+CoreDataProperties.swift in Sources */,
+				EDFFF3AE2270FF440081A0CD /* FactEntity+CoreDataProperties.swift in Sources */,
 				BE1ECDDB2256DA08000A545C /* ChuckFactsTableViewController.swift in Sources */,
 				BE1ECDD92255A1DE000A545C /* Facts.swift in Sources */,
 				BE79E971225EC8E1003BB70D /* StringFile.swift in Sources */,
