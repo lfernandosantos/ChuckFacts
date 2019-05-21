@@ -27,9 +27,7 @@ class ChuckFactsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setup()
-
     }
 
     
@@ -61,28 +59,21 @@ class ChuckFactsTableViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell =  Bundle.main.loadNibNamed("FactsTableViewCell", owner: self, options: nil)?.first as? FactsTableViewCell {
-            cell.factLabel.text = factsViewModel.facts[indexPath.row].title
-            if factsViewModel.facts[indexPath.row].title.count > 80 {
-                cell.factLabel.font = UIFont.boldSystemFont(ofSize: 14)
+        
+        if let cell =  FactsTableViewCell.getTableViewCell() {
+            cell.populateCell(self.factsViewModel.facts[indexPath.row])
+            cell.sharedItemClicked = { fact in
+                self.shareLink(fact.link)
             }
-            cell.categoryLabel.text = factsViewModel.facts[indexPath.row].category
-            cell.postion = indexPath.row
-            cell.factDelegate = self
-
             return cell
         }
-
         return UITableViewCell()
     }
+    
 
-}
-
-extension ChuckFactsTableViewController: FactItemPressedDelegate {
-    func clickShareFact(_ at: Int) {
-        let item = factsViewModel.facts[at]
-        let activityViewController = UIActivityViewController(activityItems: [item.link], applicationActivities: nil)
+    func shareLink(_ link: String) {
+        let activityViewController = UIActivityViewController(activityItems: [link], applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
-        present(activityViewController, animated: true, completion: nil)
+        self.present(activityViewController, animated: true, completion: nil)
     }
 }

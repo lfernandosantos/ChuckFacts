@@ -14,10 +14,24 @@ class FactsTableViewCell: UITableViewCell {
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var shareButton: UIButton!
+    
+    private static let nibName = "FactsTableViewCell"
 
-    var postion: Int?
+    var factVM: FactViewModel?
     var factDelegate: FactItemPressedDelegate?
+    var sharedItemClicked: ((FactViewModel) -> Void)?
 
+
+    func populateCell(_ factMV: FactViewModel) {
+        self.factVM = factMV
+        self.factLabel.text = factMV.title
+        if factMV.title.count > 80 {
+            self.factLabel.font = UIFont.boldSystemFont(ofSize: 14)
+        }
+        self.categoryLabel.text = factMV.category
+
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
 
@@ -30,10 +44,15 @@ class FactsTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
+
     
     @IBAction func shareItem(_ sender: Any) {
-        if let at = postion {
-            factDelegate?.clickShareFact(at)
+        if let fact = factVM {
+            sharedItemClicked?(fact)
         }
+    }
+    
+    static func getTableViewCell() -> FactsTableViewCell? {
+        return Bundle.main.loadNibNamed(nibName, owner: self, options: nil)?.first as? FactsTableViewCell 
     }
 }
